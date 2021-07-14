@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import './setupTests.js';
 import App from '../App';
 
-test('renders learn react link', () => {
+test('renders comming soon text', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const welcomeElement = screen.getByText(/Comming Soon/i);
+  expect(welcomeElement).toBeInTheDocument();
 });
